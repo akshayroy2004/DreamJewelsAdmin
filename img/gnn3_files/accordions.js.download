@@ -1,0 +1,13 @@
+/** Shopify CDN: Minification failed
+
+Line 13:83 Transforming class syntax to the configured target environment ("es5") is not supported yet
+Line 13:120 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 13:219 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 13:250 Transforming const to the configured target environment ("es5") is not supported yet
+Line 13:584 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 13:588 Transforming const to the configured target environment ("es5") is not supported yet
+Line 13:724 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 13:728 Transforming const to the configured target environment ("es5") is not supported yet
+
+**/
+customElements.get("accordions-custom")||customElements.define("accordions-custom",class extends HTMLElement{constructor(){super(),this.accordions=this.querySelectorAll(".accordion"),this.initAccordions()}initAccordions(){this.accordions.forEach(c=>{const o=c.querySelector(".accordion__intro"),t=c.querySelector(".accordion__content");c.classList.contains("accordion__active")&&this.openAccordion(c),o.addEventListener("click",()=>{t.style.maxHeight&&t.style.length>0?this.closeAccordion(c):(this.accordions.forEach(c=>this.closeAccordion(c)),this.openAccordion(c))})})}openAccordion(c){const o=c.querySelector(".accordion__content");c.classList.add("accordion__active"),o.style.maxHeight=o.scrollHeight+"px"}closeAccordion(c){const o=c.querySelector(".accordion__content");c.classList.remove("accordion__active"),o.style.maxHeight=null}});

@@ -1,0 +1,9 @@
+/** Shopify CDN: Minification failed
+
+Line 9:0 Transforming class syntax to the configured target environment ("es5") is not supported yet
+Line 9:51 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 9:236 Transforming object literal extensions to the configured target environment ("es5") is not supported yet
+Line 9:240 Transforming const to the configured target environment ("es5") is not supported yet
+
+**/
+class SpecialOffers extends HTMLElement{constructor(){super(),this.codes=this.querySelectorAll(".offer"),this.copies=this.querySelectorAll(".copied"),this.codes.forEach(e=>{e.addEventListener("click",this.copyCode.bind(this))})}copyCode(e){const o=e.target.closest(".offer"),t=o.dataset.code;this.codes.forEach(e=>e.querySelector(".offer_box").style.border="0.66px solid #414042"),t&&navigator.clipboard.writeText(t),this.copies.forEach(e=>e.style.opacity=0),o.querySelector(".copied")&&(o.querySelector(".copied").style.opacity=1,o.querySelector(".offer_box").style.border="0.66px solid #e9718b")}}customElements.get("special-offers")||customElements.define("special-offers",SpecialOffers);

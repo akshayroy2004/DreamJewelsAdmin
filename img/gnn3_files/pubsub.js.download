@@ -1,0 +1,7 @@
+/** Shopify CDN: Minification failed
+
+Line 7:0 Transforming let to the configured target environment ("es5") is not supported yet
+Line 7:111 Transforming array spread to the configured target environment ("es5") is not supported yet
+
+**/
+let subscribers={};function subscribe(s,r){return void 0===subscribers[s]&&(subscribers[s]=[]),subscribers[s]=[...subscribers[s],r],function(){subscribers[s]=subscribers[s].filter(s=>s!==r)}}function publish(s,r){subscribers[s]&&subscribers[s].forEach(s=>{s(r)})}
